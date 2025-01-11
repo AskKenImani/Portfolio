@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kehinde Imani - Frontend Developer</title>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="stylesheet" href="./Styles/portfolio.css">
+</head>
+<body>
+    <header>
+        <h1>Kehinde Imani</h1>
+        <p>Frontend Web Developer|Virtual Administrative Assistant| Data Entry Specialist| A Mathematics Educator</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    
+    <section id="about">
+        <h2>About Me</h2>
+        
+        
+        <div class="about-container">
+            
+            <img src="./PXL_20240616_125545488.PORTRAIT.jpg" alt="Kehinde Imani" class="profile-picture">
+            
+            
+            <p>I'm a passionate frontend web developer with a background in mechanical engineering and teaching. I specialize in HTML, CSS, and JavaScript to build beautiful, user-friendly websites.</p>
+        </div>
+    </section>
+
+    
+    <section id="projects">
+        <h2>My Projects</h2>
+        <p>Here are a few projects I’ve worked on:</p>
+        <div class="portfolio-item">
+            <h3>Rock, Paper and Scissors</h3>
+            <p>This is a game like that was developed using HTML, CSS and Javascript. Check it out:</p>
+            <a href="https://creative-licorice-168f3d.netlify.app/" target="_blank">View Live Demo</a>
+        </div>
+        <div>
+            <h3>Facebook Clone: Sign Up & Login Form</h3>
+            <p>This project is a responsive clone of Facebook's Sign Up and Login pages, featuring both forms with modern design and functionality.</p>
+            <ul>
+              <li><strong>Responsive Design:</strong> Optimized for mobile, tablet, and desktop devices.</li>
+              <li><strong>EmailJS Integration:</strong> Sends confirmation emails when users sign up or log in.</li>
+              <li><strong>Form Switching:</strong> Users can seamlessly toggle between the Login and Sign-Up forms.</li>
+            </ul>
+            <p>Check out the live project <a href="https://nimble-hotteok-258581.netlify.app/" target="_blank">here</a>.</p>
+        </div>
+          
+          
+    </section>
+
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Connect with me: <a href="https://www.linkedin.com/in/kehinde-imani">LinkedIn</a> | <a href="https://github.com/AskKenImani">GitHub</a></p>
+    </footer>
+
+    <script>
+        emailjs.init('nsl1_nl9gTWzl8moK');
+
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var form = event.target;
+
+            emailjs.sendForm('service_6affedu', 'template_bnv3zgb', form)
+                .then(function(response) {
+                    console.log('SUCCESS!', response);
+                    alert('Message Sent!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Message not sent. Please try again.');
+                });
+        });
+    </script>
+</body>
+</html>
