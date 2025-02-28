@@ -3,132 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Happy+Monkey&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <title>Kehinde Imani - Frontend Developer</title>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <link rel="stylesheet" href="./Styles/portfolio.css">
+    <title>Home - Kehinde Imani</title>
+    <link rel="stylesheet" href="Styles/global.css">
 </head>
-<body>
+<body class = "home-page">
+
     <div id="container">
-        <header>
-            <img src="./PXL_20240616_125545488.PORTRAIT.jpg" alt="Kehinde Imani" class="profile-picture">
-            <h1>Kehinde Imani</h1>
-            <p>Frontend Web Developer</p>
-            <p>Virtual Administrative Assistant</p>
-            <p>Data Entry Specialist</p>
-            <p>A Mathematics Educator</p>
-            <!-- <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav> -->
-        </header>
-    
-        
-        <section id="about">
-            <h2>About Me</h2>
-                <p>I'm a passionate frontend web developer with a background in mechanical engineering and teaching. <br>I specialize in HTML, CSS, and JavaScript to build beautiful, user-friendly websites.</p>
-        </section>
-    
-        
-        <section id="projects">
-            <h2>My Projects</h2>
-            <p>Click on a category to view projects.</p>
+
+        <div id="header-placeholder"></div>
+
+        <section id="hero">
+
+            <h1>Welcome to My Website</h1>
+
+            <p>Frontend Developer | Virtual Assistant | Mathematics Educator</p>
             
-            <button class="toggle-btn" onclick="toggleProjects('html-css')">HTML & CSS Projects</button>
-            <div id="html-css" class="project-group">
-                <div class="project">
-                    <h3>Digital Business Card</h3>
-                    <p>A sleek, modern digital business card built with HTML and CSS.</p>
-                    <a href="https://kehindebusinesscard.netlify.app/" target="_blank">View the Project</a>
-                </div>
-            </div>
-            
-            <button class="toggle-btn" onclick="toggleProjects('html-css-js')">HTML, CSS & JavaScript Projects</button>
-            <div id="html-css-js" class="project-group">
-                <div class="project">
-                    <h3>Rock, Paper and Scissors</h3>
-                    <p>A fun game developed using HTML, CSS, and JavaScript.</p>
-                    <a href="https://creative-licorice-168f3d.netlify.app/" target="_blank">View Live Demo</a>
-                </div>
-                <div class="project">
-                    <h3>Facebook Clone: Sign Up & Login Form</h3>
-                    <p>Responsive Facebook login/signup clone with EmailJS integration.</p>
-                    <a href="https://nimble-hotteok-258581.netlify.app/" target="_blank">View the Project</a>
-                </div>
-                <div class="project">
-                    <h3>Catfact</h3>
-                    <p>Displays random cat facts using API.</p>
-                    <a href="https://kaleidoscopic-mochi-85b34c.netlify.app" target="_blank">View the Project</a>
-                </div>
-                <div class="project">
-                    <h3>Game of Colours</h3>
-                    <p>A color-guessing game with interactive UI.</p>
-                    <a href="https://game-of-colours.netlify.app/" target="_blank">View the Project</a>
-                </div>
-                <div class="project">
-                    <h3>Eko-Ìlú (Lagos Homepage)</h3>
-                    <p>Homepage project showcasing Lagos.</p>
-                    <a href="https://eko-ile.netlify.app/" target="_blank">View the Project</a>
-                </div>
-                <div class="project">
-                    <h3>iClone (TechBridge Capstone Project)</h3>
-                    <p>Contributed to the reel section in this collaborative project.</p>
-                    <a href="https://i-clone-techbridge.netlify.app" target="_blank">View the Project</a>
-                </div>
-                <div class="project">
-                    <h3>Ken Number Selection System</h3>
-                    <p>A number selection system built with JavaScript.</p>
-                    <a href="https://kennumberselectionsystem.netlify.app/" target="_blank">View Project</a>
-                </div>
-            </div>
+            <img id="home-pic" src="images/PXL_20240616_125545488.PORTRAIT.jpg" alt="Kehinde Imani welcoming viewers with a warm smile">
+
         </section>
-    
-        
-        <section id="contact">
-            <h2>Contact</h2>
-            <form id="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    
+
+        <div id="footer-placeholder"></div>
+
     </div>
-    <footer>
-        <p>Connect with me: <a href="https://www.linkedin.com/in/kehinde-imani">LinkedIn</a> | <a href="https://github.com/AskKenImani">GitHub</a></p>
-    </footer>
 
-    <script>
-        function toggleProjects(category) {
-            const projectGroups = document.querySelectorAll('.project-group');
-    
-            projectGroups.forEach(group => {
-            group.classList.remove('active');
-             });
+    <script src="JavaScript/script.js"></script>
 
-            const selectedGroup = document.getElementById(category);
-            selectedGroup.classList.add('active');
-         }
-        emailjs.init('nsl1_nl9gTWzl8moK');
-
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            var form = event.target;
-
-            emailjs.sendForm('service_6affedu', 'template_bnv3zgb', form)
-                .then(function(response) {
-                    console.log('SUCCESS!', response);
-                    alert('Message Sent!');
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    alert('Message not sent. Please try again.');
-                });
-        });
-    </script>
 </body>
+
 </html>
