@@ -4,13 +4,11 @@ import "./Projects.css";
 
 const projects = [
   {
-    title: "Ken Unit Converter",
-    description:
-      "A tool for quick and accurate unit conversions in various fields, reducing errors in measurement-related industries such as construction, engineering, and science.",
-    economicImportance:
-      "Enhances productivity by providing instant conversions, reducing manual calculations, and preventing costly errors.",
-    image: "/images/unit converter.PNG",
-    link: "https://kenunitconvert.netlify.app/",
+    "title": "Ken Appointment App",
+    "description": "A web-based scheduling system that allows users to book, manage, and track appointments seamlessly, enhancing efficiency and time management.",
+    "economicImportance": "Improves business productivity by reducing scheduling conflicts, automating reminders, and optimizing appointment management for professionals and organizations.",
+    "image": "/images/appointment.png",
+    "link": "https://kenappointmentapp.netlify.app/"
   },
   {
     title: "Ken Password Generator",
@@ -21,15 +19,6 @@ const projects = [
     image: "/images/PasswordGen.PNG",
     link: "https://kenpasswordgenerator.netlify.app/",
   },
-//   {
-//     title: "Ken Number Selection System",
-//     description:
-//       "A number-based selection system for applications such as lottery systems, random sampling, and fair draws.",
-//     economicImportance:
-//       "Ensures fairness in selections, reduces biases, and can be used in decision-making processes in different industries.",
-//     image: "/images/NumberSelection.PNG",
-//     link: "https://kennumberselectionsystem.netlify.app/",
-//   },
   {
     title: "Game of Colours",
     description:
